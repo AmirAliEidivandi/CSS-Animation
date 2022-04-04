@@ -7,6 +7,9 @@
         <title>local storage cookies</title>
     </head>
     <body>
+        <textarea style="width: 200px; height: 60px" id="area" placeholder="Write here"></textarea>
+        <br />
+        <button onclick="localStorage.removeItem('area');area.value=''">Clear</button>
         <!-- js -->
         <script src="./index.js"></script>
     </body>
