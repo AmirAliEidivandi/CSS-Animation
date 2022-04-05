@@ -1,13 +1,13 @@
-const container = document.querySelector('.blogs')
+const container = document.querySelector(".blogs");
 
 const renderPost = async () => {
     let url = "http://localhost:3000/posts";
 
-    const res = await fetch(url)
-    const posts = await res.json()
-    
-    let template = ''
-    posts.forEach(post => {
+    const res = await fetch(url);
+    const posts = await res.json();
+
+    let template = "";
+    posts.forEach((post) => {
         template += `
             <div class="post">
                 <h2>${post.title}</h2>
@@ -16,9 +16,9 @@ const renderPost = async () => {
                 <a href="./detail.html?id=${post.id}">read more...</a>
             </div>
         `;
-    })
+    });
 
-    container.innerHTML = template
-}
+    container.innerHTML = template;
+};
 
-window.addEventListener('DOMContentLoaded', () => renderPost())
+window.addEventListener("DOMContentLoaded", () => renderPost());
